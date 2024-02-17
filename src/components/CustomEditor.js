@@ -28,12 +28,6 @@ function CustomEditor() {
         focusEditor()
     }, []);
 
-    useEffect(() => {
-        const contentState = editorState.getCurrentContent();
-        const serializedContent = convertToRaw(contentState);
-        console.log(serializedContent);
-    }, [editorState]);
-
     const onChange = (newEditorState) => {
         setEditorState(newEditorState);
     };
